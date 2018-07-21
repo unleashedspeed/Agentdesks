@@ -73,6 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.loadingDataFromAPI = false
                 }
             } else {
+                self.loadingDataFromAPI = false
                 // Do appropriate error handling here. May be show an alert.
             }
         }
@@ -87,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             try managedContext.execute(deleteRequest)
         } catch let error as NSError {
-            print("An error occurred")
+            print("Could not delete. \(error), \(error.userInfo)")
         }
         for facilty in facilties {
             let entity = NSEntityDescription.entity(forEntityName: "Property", in: managedContext)!
@@ -127,7 +128,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             try managedContext.execute(deleteRequest)
         } catch let error as NSError {
-            print("An error occurred")
+            print("Could not delete. \(error), \(error.userInfo)")
         }
         
         for exclusion in exclusions {
