@@ -81,8 +81,8 @@
 				09A94A4C2101059200148074 /* Supporting Files */,
 				09A94A4E210105AB00148074 /* View Controllers */,
 				09A94A4D210105A200148074 /* Storyboards */,
-				09A94A3E2101057000148074 /* Agentdesks.xcdatamodeld */,
 				09A94A5E21011BDC00148074 /* TableView Cells */,
+				09A94A3E2101057000148074 /* Agentdesks.xcdatamodeld */,
 			);
 			path = Agentdesks;
 			sourceTree = "<group>";

@@ -32,7 +32,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wsP-Pk-l6P"/>
+                    <navigationItem key="navigationItem" id="wsP-Pk-l6P">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="7kF-xB-P2a"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xlJ-Yx-DyP" id="FEY-aM-EUG"/>
                     </connections>

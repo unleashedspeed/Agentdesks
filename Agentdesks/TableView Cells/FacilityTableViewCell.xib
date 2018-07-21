@@ -76,6 +76,13 @@
                             </imageView>
                         </subviews>
                     </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rooms" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-cx-0EP">
+                        <rect key="frame" x="180.5" y="103" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="YFz-hz-PLd"/>
+                            <constraint firstAttribute="height" constant="30" id="dM2-pY-xMh"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="pAR-oy-BnH" secondAttribute="trailing" constant="16" id="32v-V6-aQG"/>
@@ -86,11 +93,13 @@
                     <constraint firstItem="YGK-Sy-YWJ" firstAttribute="leading" secondItem="Wui-IN-iJO" secondAttribute="trailing" constant="8" id="Tao-0C-fhT"/>
                     <constraint firstItem="Wui-IN-iJO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="agt-GN-m3Y"/>
                     <constraint firstItem="Scf-Qb-10m" firstAttribute="top" secondItem="OJo-dD-zEA" secondAttribute="bottom" constant="12" id="c5P-Gx-Ea1"/>
+                    <constraint firstItem="U7k-kw-DDc" firstAttribute="centerY" secondItem="wl4-cx-0EP" secondAttribute="centerY" id="e2C-Xi-XnB"/>
                     <constraint firstItem="YGK-Sy-YWJ" firstAttribute="centerY" secondItem="Wui-IN-iJO" secondAttribute="centerY" id="eoo-CA-VaR"/>
                     <constraint firstItem="OJo-dD-zEA" firstAttribute="top" secondItem="pAR-oy-BnH" secondAttribute="bottom" constant="4" id="hg0-8a-30K"/>
                     <constraint firstAttribute="trailing" secondItem="U7k-kw-DDc" secondAttribute="trailing" constant="16" id="jQp-Pz-3do"/>
                     <constraint firstItem="U7k-kw-DDc" firstAttribute="top" secondItem="Scf-Qb-10m" secondAttribute="bottom" constant="4" id="lf0-5L-v0i"/>
                     <constraint firstItem="pAR-oy-BnH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nIs-SK-aSy"/>
+                    <constraint firstItem="U7k-kw-DDc" firstAttribute="leading" secondItem="wl4-cx-0EP" secondAttribute="trailing" constant="6" id="yuS-kz-EPc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -105,4 +114,7 @@
             <point key="canvasLocation" x="34" y="42.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="rooms" width="25" height="25"/>
+    </resources>
 </document>

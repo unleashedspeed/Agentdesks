@@ -31,6 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = NSLocalizedString("Properties", comment: "Properties Title")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +70,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 UserDefaults.standard.set(Date(), forKey:"lastLocalStorageUpdate")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.loadingDataFromAPI = false
                 }
+            } else {
+                // Do appropriate error handling here. May be show an alert.
             }
         }
     }
@@ -109,6 +113,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.facilities.append(facilityManagedObject)
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
+                // Do appropriate error handling here. May be show an alert.
             }
         }
     }
@@ -138,6 +143,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     exclusionList.append(exclusionManagedObject)
                 } catch let error as NSError {
                     print("Could not save. \(error), \(error.userInfo)")
+                    // Do appropriate error handling here. May be show an alert.
                 }
             }
             
@@ -169,15 +175,13 @@ extension ViewController {
         cell.facilityNameLabel.text = facility?.name
         cell.facilityImageView.image = UIImage(named: facility?.icon ?? "")
         
-        let otherFacilities = facilities[2].mutableSetValue(forKey: "options").allObjects as? [PropertyOption]
-        cell.swimmingPoolImageView.image = UIImage(named: otherFacilities?.first?.icon ?? "")
-        cell.gardenAreaImageView.image = UIImage(named: otherFacilities?[1].icon ?? "")
-        cell.garageImageView.image = UIImage(named: otherFacilities?[2].icon ?? "")
-
-        if selectedIndexPath == indexPath {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
+        if let index = facilities.index(where: { $0.value(forKey: "name") as? String == "Other facilities" }) {
+            let otherFacilities = facilities[index].mutableSetValue(forKey: "options").allObjects as? [PropertyOption]
+            if otherFacilities?.count ?? 0 >= 3 {
+                cell.swimmingPoolImageView.image = UIImage(named: otherFacilities?.first?.icon ?? "")
+                cell.gardenAreaImageView.image = UIImage(named: otherFacilities?[1].icon ?? "")
+                cell.garageImageView.image = UIImage(named: otherFacilities?[2].icon ?? "")
+            }
         }
         
         return cell
@@ -188,8 +192,6 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-
         if selectedIndexPath.count > 0 {
             let cellToUncheck = tableView.cellForRow(at: selectedIndexPath)
             cellToUncheck?.accessoryType = .none
