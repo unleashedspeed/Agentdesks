@@ -13,6 +13,13 @@
 		09A94A402101057000148074 /* Agentdesks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A3E2101057000148074 /* Agentdesks.xcdatamodeld */; };
 		09A94A422101057100148074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A94A412101057100148074 /* Assets.xcassets */; };
 		09A94A452101057100148074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A94A432101057100148074 /* LaunchScreen.storyboard */; };
+		09A94A532101072E00148074 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A502101072D00148074 /* Facility.swift */; };
+		09A94A542101072E00148074 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A522101072D00148074 /* APIService.swift */; };
+		09A94A572101075500148074 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A562101075500148074 /* UIView+Extension.swift */; };
+		09A94A592101093A00148074 /* Exclusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A582101093A00148074 /* Exclusion.swift */; };
+		09A94A5C210112AF00148074 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A94A5A210112AF00148074 /* FacilityTableViewCell.swift */; };
+		09A94A5D210112AF00148074 /* FacilityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A94A5B210112AF00148074 /* FacilityTableViewCell.xib */; };
+		48BB83A11B3D21033EAD1064 /* Pods_Agentdesks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8217C5E4E176ABD5B655AD62 /* Pods_Agentdesks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		09A94A412101057100148074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A94A442101057100148074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A94A462101057100148074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A94A502101072D00148074 /* Facility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		09A94A522101072D00148074 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		09A94A562101075500148074 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		09A94A582101093A00148074 /* Exclusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exclusion.swift; sourceTree = "<group>"; };
+		09A94A5A210112AF00148074 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityTableViewCell.swift; sourceTree = "<group>"; };
+		09A94A5B210112AF00148074 /* FacilityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilityTableViewCell.xib; sourceTree = "<group>"; };
+		40DDC5177ECAF4D3CCC77614 /* Pods-Agentdesks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agentdesks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agentdesks/Pods-Agentdesks.debug.xcconfig"; sourceTree = "<group>"; };
+		8217C5E4E176ABD5B655AD62 /* Pods_Agentdesks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agentdesks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF352F35F5D9A644B2081A9A /* Pods-Agentdesks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agentdesks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Agentdesks/Pods-Agentdesks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BB83A11B3D21033EAD1064 /* Pods_Agentdesks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				09A94A362101057000148074 /* Agentdesks */,
 				09A94A352101057000148074 /* Products */,
+				7019ADB9E5D2F270FCB27139 /* Pods */,
+				B06B5D5CC57C607624053EF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,94 @@
 		09A94A362101057000148074 /* Agentdesks */ = {
 			isa = PBXGroup;
 			children = (
-				09A94A372101057000148074 /* AppDelegate.swift */,
-				09A94A392101057000148074 /* ViewController.swift */,
-				09A94A3B2101057000148074 /* Main.storyboard */,
-				09A94A412101057100148074 /* Assets.xcassets */,
-				09A94A432101057100148074 /* LaunchScreen.storyboard */,
-				09A94A462101057100148074 /* Info.plist */,
+				09A94A4F2101072D00148074 /* Data Models */,
+				09A94A552101075500148074 /* Extensions */,
+				09A94A512101072D00148074 /* Networking */,
+				09A94A4C2101059200148074 /* Supporting Files */,
+				09A94A4E210105AB00148074 /* View Controllers */,
+				09A94A4D210105A200148074 /* Storyboards */,
 				09A94A3E2101057000148074 /* Agentdesks.xcdatamodeld */,
+				09A94A5E21011BDC00148074 /* TableView Cells */,
 			);
 			path = Agentdesks;
+			sourceTree = "<group>";
+		};
+		09A94A4C2101059200148074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A372101057000148074 /* AppDelegate.swift */,
+				09A94A412101057100148074 /* Assets.xcassets */,
+				09A94A462101057100148074 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09A94A4D210105A200148074 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A3B2101057000148074 /* Main.storyboard */,
+				09A94A432101057100148074 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		09A94A4E210105AB00148074 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A392101057000148074 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		09A94A4F2101072D00148074 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A502101072D00148074 /* Facility.swift */,
+				09A94A582101093A00148074 /* Exclusion.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		09A94A512101072D00148074 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A522101072D00148074 /* APIService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		09A94A552101075500148074 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A562101075500148074 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09A94A5E21011BDC00148074 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				09A94A5A210112AF00148074 /* FacilityTableViewCell.swift */,
+				09A94A5B210112AF00148074 /* FacilityTableViewCell.xib */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		7019ADB9E5D2F270FCB27139 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40DDC5177ECAF4D3CCC77614 /* Pods-Agentdesks.debug.xcconfig */,
+				BF352F35F5D9A644B2081A9A /* Pods-Agentdesks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B06B5D5CC57C607624053EF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8217C5E4E176ABD5B655AD62 /* Pods_Agentdesks.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A94A492101057100148074 /* Build configuration list for PBXNativeTarget "Agentdesks" */;
 			buildPhases = (
+				670F03032F189052D3BC0A97 /* [CP] Check Pods Manifest.lock */,
 				09A94A302101057000148074 /* Sources */,
 				09A94A312101057000148074 /* Frameworks */,
 				09A94A322101057000148074 /* Resources */,
+				381018120F6CC781BA05AA68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +227,64 @@
 			files = (
 				09A94A452101057100148074 /* LaunchScreen.storyboard in Resources */,
 				09A94A422101057100148074 /* Assets.xcassets in Resources */,
+				09A94A5D210112AF00148074 /* FacilityTableViewCell.xib in Resources */,
 				09A94A3D2101057000148074 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		381018120F6CC781BA05AA68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Agentdesks/Pods-Agentdesks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agentdesks/Pods-Agentdesks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		670F03032F189052D3BC0A97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Agentdesks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09A94A302101057000148074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A94A592101093A00148074 /* Exclusion.swift in Sources */,
+				09A94A572101075500148074 /* UIView+Extension.swift in Sources */,
 				09A94A3A2101057000148074 /* ViewController.swift in Sources */,
+				09A94A542101072E00148074 /* APIService.swift in Sources */,
 				09A94A382101057000148074 /* AppDelegate.swift in Sources */,
+				09A94A532101072E00148074 /* Facility.swift in Sources */,
+				09A94A5C210112AF00148074 /* FacilityTableViewCell.swift in Sources */,
 				09A94A402101057000148074 /* Agentdesks.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +427,12 @@
 		};
 		09A94A4A2101057100148074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40DDC5177ECAF4D3CCC77614 /* Pods-Agentdesks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RYBKJDVS76;
-				INFOPLIST_FILE = Agentdesks/Info.plist;
+				DEVELOPMENT_TEAM = Y78N79J6Y9;
+				INFOPLIST_FILE = "$(SRCROOT)/Agentdesks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +446,12 @@
 		};
 		09A94A4B2101057100148074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF352F35F5D9A644B2081A9A /* Pods-Agentdesks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RYBKJDVS76;
-				INFOPLIST_FILE = Agentdesks/Info.plist;
+				DEVELOPMENT_TEAM = Y78N79J6Y9;
+				INFOPLIST_FILE = "$(SRCROOT)/Agentdesks/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
