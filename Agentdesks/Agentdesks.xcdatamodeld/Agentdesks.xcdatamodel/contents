@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ExclusionEntity" representedClassName="ExclusionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="facilityID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optionsID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Property" representedClassName="Property" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PropertyOption" syncable="YES"/>
+    </entity>
+    <entity name="PropertyOption" representedClassName="PropertyOption" syncable="YES" codeGenerationType="class">
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PropertyOption" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Property" positionX="-263" positionY="-18" width="128" height="88"/>
+        <element name="ExclusionEntity" positionX="-144" positionY="27" width="128" height="75"/>
+    </elements>
 </model>
