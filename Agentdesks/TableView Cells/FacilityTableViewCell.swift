@@ -17,7 +17,6 @@ class FacilityTableViewCell: UITableViewCell {
     @IBOutlet weak var swimmingPoolImageView: UIImageView!
     @IBOutlet weak var numberOfRoomsTextField: UITextField! {
         didSet {
-            numberOfRoomsTextField.text = NSLocalizedString("Select Rooms", comment: "Select Rooms")
             numberOfRoomsTextField.inputView = pickerView
             pickerView.delegate = self
             pickerView.dataSource = self

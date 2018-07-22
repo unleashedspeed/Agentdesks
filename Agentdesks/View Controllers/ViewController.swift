@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 guard let facilities = facilities, let exclusions = exclusions else { return }
                 self.updateLocalStorage(with: facilities)
                 self.updateLocalStorage(with: exclusions)
-                UserDefaults.standard.set(Date(), forKey:"lastLocalStorageUpdate")
+                UserDefaults.standard.set(Date(), forKey: "lastLocalStorageUpdate")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.loadingDataFromAPI = false
